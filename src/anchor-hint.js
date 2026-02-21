@@ -1,7 +1,9 @@
 const $ = (e, d = document) => d.querySelector(e);
 
 class AnchorHint {
-    constructor(container, position, duration) {
+    constructor({el, container, position, duration}) {
+        if (!container || !el) return false;
+        
         this.ctn = container;
         this.top = '5%';
         this.left = '5%';
@@ -9,9 +11,15 @@ class AnchorHint {
         if (position) {
             this.top = position.top;
             this.left = position.left;
+        } else {
+            // this.rect_top = el.getBoundingClientRect().top;
+            // this.rect_left = el.getBoundingClientRect().left;
+            this.top = el.getBoundingClientRect().top - 8 + "px";
+            this.left = el.getBoundingClientRect().left + 8 + "px";
         }
         
         this.duration = duration || 200;
+        
     }
 
     show(message) {
