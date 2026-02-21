@@ -1,3 +1,3 @@
-import { information } from "./anchor-hint.js";
+import { AnchorHint } from "./anchor-hint.js";
 
-export default information;
+export default AnchorHint;
