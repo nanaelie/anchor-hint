@@ -65,14 +65,5 @@ class AnchorHint {
     }
 }
 
-const information = new AnchorHint(
-    $('body'),
-    position = {
-        top: '5%',
-        left: '20%',
-    },
-    duration = 2000,
-);
-
-export default information;
+export default AnchorHint;
 

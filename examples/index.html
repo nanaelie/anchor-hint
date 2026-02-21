@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Anchor Hint</title>
+    </head>
+    <body>
+        <div class="flex flex-wrap items-center gap-2" >
+            <input type="email" value="" >
+        </div>
+        <script type="module">
+            import AnchorHint from "../dist/anchor-hint.min.js";
+            
+            const information = new AnchorHint(
+                document.querySelector('body'),
+                {
+                    top: '5%',
+                    left: '20%',
+                },
+                2000,
+            );
+
+            information.show("This field must contain valid email address.");
+        </script>
+    </body>
+</html>
