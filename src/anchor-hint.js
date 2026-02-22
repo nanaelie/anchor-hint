@@ -38,7 +38,6 @@ class AnchorHint {
             zIndex: '999999999',
             transition: `all ${this.duration} ease-in-out`,
             fontSize: '14px',
-            borderBottomLeftRadius: '0',
             backgroundColor: '#28282855'
         });
         
