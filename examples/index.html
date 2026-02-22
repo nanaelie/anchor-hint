@@ -4,23 +4,23 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Anchor Hint</title>
-        <script src="https://cdn.jsdelivr.net/gh/nanaelie/anchor-hint/dist/anchor-hint.min.js"></script>
+        <!--<script src="https://cdn.jsdelivr.net/gh/nanaelie/anchor-hint/dist/anchor-hint.min.js"></script>-->
     </head>
     <body>
         <div class="flex flex-wrap items-center gap-2" id="bottonOfWinners">
             <input type="email" value="" >
         </div>
+        <script src="../src/anchor-hint.js"></script>
         <script>
             const information = new AnchorHint(
-                document.querySelector('body'),
                 {
-                    top: '5%',
-                    left: '20%',
-                },
-                2000,
+                    el: document.querySelector('input'),
+                    container: document.querySelector('body'),
+                    duration: 10000,
+                }
             );
 
-            information.show("This field must contain valid email address.");
+            document.onclick = () => information.show("This field must contain valid email address.");
         </script>
     </body>
 </html>
