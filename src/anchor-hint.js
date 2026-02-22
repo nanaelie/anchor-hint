@@ -12,7 +12,7 @@ class AnchorHint {
             // this.rect_top = el.getBoundingClientRect().top;
             // this.rect_left = el.getBoundingClientRect().left;
             this.top = el.getBoundingClientRect().top - el.getBoundingClientRect().height - 8 + "px";
-            this.left = (el.getBoundingClientRect().width / 2) + 8 + "px";
+            this.left = - (el.getBoundingClientRect().width / 2) + el.getBoundingClientRect().left + "px";
         }
         
         this.duration = duration ?? 200;
